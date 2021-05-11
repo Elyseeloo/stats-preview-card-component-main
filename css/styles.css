@@ -67,6 +67,8 @@ padding: 15% 15% 0;
   top: 0;
   background-color: hsl(277, 64%, 61%);
   mix-blend-mode: multiply;
+  /* JUST ADD SOME OPACITY TO THE OVERLAY */
+  opacity: 0.45;
 }
 
 @media (max-width: 990px){
@@ -86,6 +88,10 @@ padding: 15% 15% 0;
   .features-container{
     flex-direction: column;
     padding-bottom: 2%;
+  }
+  /* ADDED THE CORRECT HEIGHT */
+  .overlay {
+    height: 217px;
   }
 }
 
