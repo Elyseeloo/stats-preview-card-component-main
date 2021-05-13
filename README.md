@@ -12,7 +12,6 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -27,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](images/screenshot.png)
+[Screenshot](images/screenshot.png)
 
 
 ### Links
