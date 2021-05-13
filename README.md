@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-[Screenshot](images/screenshot.png)
+[Screenshot](https://github.com/Elyseeloo/stats-preview-card-component-main/blob/main/screenshot.png)
 
 
 ### Links
