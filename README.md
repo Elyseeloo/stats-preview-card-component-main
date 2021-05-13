@@ -16,7 +16,6 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -40,65 +39,61 @@ Users should be able to:
 
 ### Built with
 
-- HTML5
+- Semantic HTML5
 - CSS3
 - Flexbox
-- Bootstrap 5
+- Bootstrap
 
 ### What I learned
 
-This challenge was actually my first time using CSS Flexbox. I spent the initial attempt trying to solely use the Bootstrap columns but
-found it much more practical to simply apply the Flexbox properties. This also included a chance to play around with the flex-direction and reverse properties as well, which was especially useful when trying to rearrange the image from being on the left of the text to being on the top in mobile-view. I could not find a way to have this same effect with Bootstrap alone.
+This was a fun challenge, and it was actually my first time using CSS Flexbox. I spent the initial attempt trying to solely use the Bootstrap columns but found it much more practical to simply apply the Flexbox properties instead. This also included a chance to play around with the flex-direction and reverse properties, which was especially useful when trying to rearrange the image from being on the left of the text to being on the top in mobile-view. I could not find a way to get this same result with Bootstrap alone.
 
-I also had a chance to practice the media display property, which is always interesting. I settled on 990px as the max-width for mobile because that was around the size _just before_ things started going wonky on my 15" laptop.
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I also had a chance to practice the media display property. I settled on 990px as the max-width for mobile because that was around the size _just before_ things started going wonky on my 15" laptop.
+
+What was the hardest part of this challenge for me, was getting the purple color overlay on the image. This undoubtedly took me the longest amount of time to finish, but the result was well worth it. I first tackled the issue by creating an overlay div for the purple color. And this worked well enough in desktop view, but once switching over to mobile the div didn't align properly with the image. This was because the overlay was a child of the card element and not of the image. It wasn't until I made a separate class for the header tag the overlay was in and changed its position to relative (thus making it the parent of the overlay) that the overlay started to work properly.
 
 Codes I'm Proud Of:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
-
+<header class="col-lg-6 img-parent">
+  <img src="images/image-header-desktop.jpg" class= "card-image" alt="work-friends-laughing">
+    <div class="overlay">
+</header>
 ```
 
 ```css
-@media (max-width: 990px){
-  .card{
-    text-align: center;
-  }
-  .card-image, .overlay{
-    background-image: url(images/images-header-mobile.jpg);
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 10px;
-  }
-  .flex-container{
-    flex-direction: column-reverse;
-  }
-  .features-container{
-    flex-direction: column;
-    padding-bottom: 2%;
-  }
+.card-image{
+  height: 100%;
+  width: 100%;
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+}
+.img-parent{
+  position: relative;
+}
+.overlay{
+  height: 100%;
+  width: 100%;
+  background-color: hsl(277, 64%, 61%);
+  position: absolute;
+  top: 0;
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+  mix-blend-mode: multiply;
 }
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Some concepts I want to continue developing in are remembering to use Semantic HTML. For example, using tags such as ``<headers>``, ``<articles>``, ``<sections>``, and ``<asides>`` instead of mostly non-semantic markup like ``divs``. Also, even though I am familiar with Bootstrap and many of the design elements its capable of, I want to expand my working knowledge of pure CSS and only use Bootstrap when I need to override some of the unnecessary CSS that it applies to my page.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+Another aspect I want to improve upon is making my code look professional, dry, and concise.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- LinkedIn - [Elyse Chambers](https://www.linkedin.com/in/elyse-chambers-698310164/)
+- Frontend Mentor - [@Elyseeloo](https://www.frontendmentor.io/profile/Elyseeloo)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+Two very big helps to me in completing this project are Chamu and Silver Graph from the Slack Community.
